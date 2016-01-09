@@ -35,6 +35,9 @@ public class  Drive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	double rightInput = Robot.oi.getRight1().getY();
+    	double leftInput = Robot.oi.getLeft0().getY();
+    	Robot.driveTrain.drive(leftInput, rightInput);
     }
 
     // Make this return true when this Command no longer needs to run execute()
